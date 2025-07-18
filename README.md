@@ -1,4 +1,7 @@
-Code and data to support "Measuring the Stories in Songs".
+Code and data to support the following paper:
+
+David Bamman, Sabrina Baur, Mackenzie Hanh Cramer, Anna Ho and Tom
+ McEnaney (2025), "Measuring the Stories in Songs", ArXiv (currently in submission).
 
 # Data
 
@@ -25,7 +28,7 @@ Masked LMs
 ```
 cd scripts
 
-for MODEL in bert deberta roberta modern-berta
+for MODEL in bert deberta roberta modern-bert
 do
 
 python bert_narrativity_single.py --trainFile ../data/annotated_data.jsonl --mode train --agent_model ../logs/agents.${MODEL}_1960_2024.model --base ${MODEL} --task agents --device cuda:0 > ../logs/agents.${MODEL}.log 2>&1

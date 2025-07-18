@@ -5,9 +5,9 @@ data=read.table("../data/annotations.tsv", sep="\t", quote = "\"", head=TRUE)
 
 pdf("annotation_dist.pdf", width=18)
 
-agent_g=ggplot(data, aes(x=Final.AGENT)) + geom_density(fill = "blue", alpha = 0.3) + xlab("Agents") + ylab("density") + ylim(0,.4)
-event_g=ggplot(data, aes(x=Final.EVENTS)) + geom_density(fill = "blue", alpha = 0.3) + xlab("Events") + ylab("")+ ylim(0,.4)
-world_g=ggplot(data, aes(x=Final.WORLD)) + geom_density(fill = "blue", alpha = 0.3) + xlab("World") + ylab("")+ ylim(0,.4)
+agent_g=ggplot(data, aes(x=Final.AGENT)) + geom_density(fill = "blue", alpha = 0.3) + xlab("Agents") + ylab("density") + ylim(0,.4) + theme(axis.title.x = element_text(size = 18), axis.title.y = element_text(size = 18))
+event_g=ggplot(data, aes(x=Final.EVENTS)) + geom_density(fill = "blue", alpha = 0.3) + xlab("Events") + ylab("")+ ylim(0,.4) + theme(axis.title.x = element_text(size = 18))
+world_g=ggplot(data, aes(x=Final.WORLD)) + geom_density(fill = "blue", alpha = 0.3) + xlab("World") + ylab("")+ ylim(0,.4) + theme(axis.title.x = element_text(size = 18))
 
 (agent_g + event_g + world_g) +
   plot_layout(ncol = 3, widths = rep(1, 3)) &
