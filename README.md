@@ -21,6 +21,7 @@ pip install transformers torch scipy protobuf tiktoken sentencepiece optuna book
 python -m spacy download en_core_web_sm
 ```
 
+
 # Train and evaluate models
 
 Masked LMs
@@ -56,6 +57,14 @@ python featurized_narrativity_sklearn.py --trainFile ../data/annotated_data.json
 done
 ```
 
+
+# Download trained RoBERTa models
+
+```
+wget -P logs/ http://yosemite.ischool.berkeley.edu/david/song_narrativity/agents.roberta_1960_2024.model
+wget -P logs/ http://yosemite.ischool.berkeley.edu/david/song_narrativity/events.roberta_1960_2024.model
+wget -P logs/ http://yosemite.ischool.berkeley.edu/david/song_narrativity/world.roberta_1960_2024.model
+```
 
 # Predict
 
