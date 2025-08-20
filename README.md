@@ -1,7 +1,7 @@
 Code and data to support the following paper:
 
 David Bamman, Sabrina Baur, Mackenzie Hanh Cramer, Anna Ho and Tom
- McEnaney (2025), "Measuring the Stories in Songs", ArXiv (currently in submission).
+ McEnaney (2025), "Measuring the Stories in Songs" (currently in submission), [pdf](http://yosemite.ischool.berkeley.edu/david/papers/song_narrativity.pdf).
 
 # Data
 
